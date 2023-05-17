@@ -14,7 +14,7 @@ const Navbar: React.FC<Props> = ({ className }) => {
       <a href="/" className=" flex items-center">
         <Image src='/Untitled.png' alt='logo' width={60} height={20} />
       </a>
-      <a href="intagram.com">
+      <a href="https://www.instagram.com/peroxofficial/">
         <Insta />
       </a>
     </header>
