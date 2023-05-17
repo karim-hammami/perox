@@ -1,12 +1,8 @@
-import { Inter } from 'next/font/google'
-import Navbar from '@/components/Navbar'
-import Hero from '@/components/Hero'
-import Gallery from '@/components/Gallery'
 import Desk from '@/components/Desk'
-
-
-
-const inter = Inter({ subsets: ['latin'] })
+import Gallery from '@/components/Gallery'
+import Hero from '@/components/Hero'
+import Navbar from '@/components/Navbar'
+import Image from 'next/image'
 
 export default function Home() {
   return (
