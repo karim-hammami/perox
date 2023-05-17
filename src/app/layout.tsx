@@ -6,6 +6,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Perox',
   description: 'Perox landing Page',
+  icons: {
+    icon: '/Untitled.png',
+  }
 }
 
 export default function RootLayout({
