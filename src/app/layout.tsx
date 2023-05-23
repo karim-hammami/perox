@@ -7,7 +7,7 @@ export const metadata = {
   title: 'PEROX',
   description: 'PEROX landing Page',
   icons: {
-    icon: '/Untitled.png',
+    icon: '/LOGOS.png',
   }
 }
 
