@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Perox',
-  description: 'Perox landing Page',
+  title: 'PEROX',
+  description: 'PEROX landing Page',
   icons: {
     icon: '/Untitled.png',
   }
