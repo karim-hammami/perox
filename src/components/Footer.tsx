@@ -1,4 +1,5 @@
 import React from 'react';
+import { SocialIcon } from 'react-social-icons';
 
 const Footer: React.FC = () => {
   return (
@@ -7,9 +8,15 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm mb-4 md:mb-0">&copy; 2023 PEROXANA</div>
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white">Facebook</a>
-            <a href="#" className="text-gray-400 hover:text-white">Twitter</a>
-            <a href="#" className="text-gray-400 hover:text-white">Instagram</a>
+            <a href="#" className="">
+            <SocialIcon url="https://soundcloud.com/jaketrent" />
+            </a>
+            <a href="#" className="">
+            <SocialIcon url="https://facebook.com/jaketrent" />
+            </a>
+            <a href="#" className="">
+            <SocialIcon url="https://instagram.com/jaketrent" />
+            </a>
           </div>
         </div>
       </div>
