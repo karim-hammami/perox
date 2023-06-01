@@ -2,7 +2,7 @@ import React from 'react'
 
 function CTA() {
   return (
-    <div className='flex md:flex-row flex-col items-center m-0 justify-center h-screen py-10  w-full'>
+    <div id="contact" className='flex md:flex-row flex-col items-center m-0 justify-center h-screen py-10  w-full'>
         <div className='flex  flex-col items-center justify-center  w-full h-full'>
             <div className='text-4xl md:text-8xl font-bold text-[#FFFF00] '>Contact Me</div>
             <input placeholder='Email' className='px-4 py-2 outline-none w-2/3 m-5 h-[45px] rounded-lg' />

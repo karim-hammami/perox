@@ -3,7 +3,7 @@ import { SocialIcon } from 'react-social-icons';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#171717] text-white py-4">
+    <footer id="links" className="bg-[#171717] text-white py-4">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm mb-4 md:mb-0">&copy; 2023 PEROXANA</div>

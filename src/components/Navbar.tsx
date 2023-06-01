@@ -43,10 +43,10 @@ const Navbar: React.FC<Props> = ({ className }) => {
       <div className="relative">
         <Image src={'/hamburger.svg'} alt="ham" width={30} height={30} className="cursor-pointer" onTouchStart={toggleDropdown} onClick={toggleDropdown} />
         {isDropdownOpen && (
-          <div ref={dropdownRef} className=" fixed z-10 w-full right-0 mt-4 bg-[#171717] shadow-lg rounded-md">
-            <Link href="/about" className="block rounded-t-2xl py-5 text-center px-4 text-[#FFFF00] hover:bg-gray-800 hover:text-[#d3d36f]" onClick={closeDropdown}>About</Link>
-            <Link href="/services" className="block py-5 text-center px-4 text-[#FFFF00] hover:bg-gray-800 hover:text-[#d3d36f]" onClick={closeDropdown}>Services</Link>
-            <Link href="/contact" className="block py-5 rounded-b-2xl text-center px-4 text-[#FFFF00] hover:bg-gray-800 hover:text-[#d3d36f]" onClick={closeDropdown}>Contact</Link>
+          <div ref={dropdownRef} className="fixed z-10 w-1/2 right-0 left-0 mx-auto mt-2 bg-[#FFFF00] shadow-lg rounded-md">
+            <Link href="#about" className="block rounded-t-2xl font-bold py-5 text-center text-xl px-4 text-[#171717] hover:bg-gray-800 hover:text-[#d3d36f]" onClick={closeDropdown}>About me</Link>
+            <Link href="#contact" className="block py-5 font-bold text-center px-4 text-xl text-[#171717] hover:bg-gray-800 hover:text-[#d3d36f]" onClick={closeDropdown}>Contact me</Link>
+            <Link href="#links" className="block py-5 font-bold rounded-b-2xl text-xl text-center px-4 text-[#171717] hover:bg-gray-800 hover:text-[#d3d36f]" onClick={closeDropdown}>Links</Link>
           </div>
         )}
       </div>
