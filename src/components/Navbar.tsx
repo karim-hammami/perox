@@ -12,6 +12,7 @@ const Navbar: React.FC<Props> = ({ className }) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    console.log(isDropdownOpen)
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         closeDropdown();
@@ -28,6 +29,7 @@ const Navbar: React.FC<Props> = ({ className }) => {
   }, []);
 
   const toggleDropdown = () => {
+    
     setIsDropdownOpen(!isDropdownOpen);
   };
 

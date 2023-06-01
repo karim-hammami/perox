@@ -28,7 +28,7 @@ function CTA() {
                     type="email"
                     required
                     placeholder="Email"
-                    className="px-4 py-2 outline-none w-2/3 m-5 h-[45px] rounded-lg"
+                    className="px-4 py-2 mt-10 outline-none w-2/3 m-5 h-[45px] rounded-lg"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
@@ -48,7 +48,7 @@ function CTA() {
             <div className="flex flex-col items-center justify-center w-full h-full">
                 <div className="text-4xl md:text-8xl font-bold text-[#FFFF00]">Booking</div>
                 <a href="tel:+21654443650" className="text-4xl md:text-8xl text-white">
-                    +216 54 443 560
+                    +216 58 612 477
                 </a>
             </div>
         </div>
