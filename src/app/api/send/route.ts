@@ -17,14 +17,14 @@ export async function POST(req: Request, res: Response) {
     const transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
-        user: 'your-email@gmail.com',
-        pass: 'your-password',
+        user: process.env.EMAIL,
+        pass: process.env.PASS,
       },
     });
 
     const mailOptions = {
       from: reso.email, // Use the email entered by the user
-      to: 'your-email@gmail.com', // Replace with your Gmail email address
+      to: process.env.EMAIL, // Replace with your Gmail email address
       subject: 'Email from Next.js Form',
       text: reso.message,
     };
