@@ -38,15 +38,15 @@ const Navbar: React.FC<Props> = ({ className }) => {
   return (
     <header className={`fixed top-0 left-0 right-0 backdrop-blur-2xl flex items-center z-50 justify-between w-full py-2 md:py-5 px-6 ${className ?? ''}`}>
       <Link href="/" className="flex items-center">
-        <Image src='/LOGOS.png' alt='logo' width={60} height={20} />
+        <Image src='/LOGOS.png' alt='logo' width={30} height={30} />
       </Link>
       <div className="relative">
         <Image src={'/hamburger.svg'} alt="ham" width={30} height={30} className="cursor-pointer" onTouchStart={toggleDropdown} onClick={toggleDropdown} />
         {isDropdownOpen && (
           <div ref={dropdownRef} className="absolute top-full right-0 mt-2 bg-white shadow-lg rounded-md">
-            <Link href="/about" className="block px-4 py-2 text-gray-800 hover:bg-gray-200" onClick={closeDropdown}>About</Link>
-            <Link href="/services" className="block px-4 py-2 text-gray-800 hover:bg-gray-200" onClick={closeDropdown}>Services</Link>
-            <Link href="/contact" className="block px-4 py-2 text-gray-800 hover:bg-gray-200" onClick={closeDropdown}>Contact</Link>
+            <Link href="/about" className="block py-2 px-4 text-gray-800 hover:bg-gray-200 hover:text-gray-900" onClick={closeDropdown}>About</Link>
+            <Link href="/services" className="block py-2 px-4 text-gray-800 hover:bg-gray-200 hover:text-gray-900" onClick={closeDropdown}>Services</Link>
+            <Link href="/contact" className="block py-2 px-4 text-gray-800 hover:bg-gray-200 hover:text-gray-900" onClick={closeDropdown}>Contact</Link>
           </div>
         )}
       </div>

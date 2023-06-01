@@ -1,3 +1,4 @@
+import CTA from '@/components/CTA'
 import Desk from '@/components/Desk'
 import Gallery from '@/components/Gallery'
 import Hero from '@/components/Hero'
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Gallery />
       <Desk />
+      <CTA />
     </main>
   )
 }
