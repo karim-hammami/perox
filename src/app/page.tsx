@@ -1,5 +1,6 @@
 import CTA from '@/components/CTA'
 import Desk from '@/components/Desk'
+import Footer from '@/components/Footer'
 import Gallery from '@/components/Gallery'
 import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
@@ -15,6 +16,7 @@ export default function Home() {
       <Gallery />
       <Desk />
       <CTA />
+      <Footer />
     </main>
   )
 }
