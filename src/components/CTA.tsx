@@ -8,20 +8,16 @@ function CTA() {
     const handleSubmit = async () => {
         const data = { email, message };
 
-        fetch('http://localhost:3000/api/send', {
+        const res = await fetch('http://localhost:3000/api/send', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         })
-            .then(response => {
-                console.log(JSON.stringify(response))
-                // Handle the response
-            })
-            .catch(error => {
-                // Handle the error
-            });
+
+        const body = await res.json()
+        console.log(body)
     };
 
     return (
@@ -29,6 +25,8 @@ function CTA() {
             <div className="flex flex-col items-center justify-center w-full h-full">
                 <div className="text-4xl md:text-8xl font-bold text-[#FFFF00]">Contact Me</div>
                 <input
+                    type="email"
+                    required
                     placeholder="Email"
                     className="px-4 py-2 outline-none w-2/3 m-5 h-[45px] rounded-lg"
                     value={email}
