@@ -9,13 +9,13 @@ const Footer: React.FC = () => {
           <div className="text-sm mb-4 md:mb-0">&copy; 2023 PEROXANA</div>
           <div className="flex space-x-4">
             <a href="#" className="">
-            <SocialIcon url="https://soundcloud.com/jaketrent" />
+            <SocialIcon url="https://soundcloud.com/peroxmusic" />
             </a>
             <a href="#" className="">
-            <SocialIcon url="https://facebook.com/jaketrent" />
+            <SocialIcon url="https://www.facebook.com/peroxmusic/" />
             </a>
             <a href="#" className="">
-            <SocialIcon url="https://instagram.com/jaketrent" />
+            <SocialIcon url="https://www.instagram.com/peroxofficial/?hl=en" />
             </a>
           </div>
         </div>
