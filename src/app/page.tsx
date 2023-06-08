@@ -12,10 +12,12 @@ export default function Home() {
       className='bg-[#171717]'
     >
       <Navbar />
-      <Hero />
-      <Gallery />
-      <Desk />
-      <CTA />
+      <div className='container main'>
+        <Hero />
+        <Gallery />
+        <Desk />
+        <CTA />
+      </div>
       <Footer />
     </main>
   )
