@@ -1,24 +1,9 @@
-import CTA from '@/components/CTA'
-import Desk from '@/components/Desk'
-import Footer from '@/components/Footer'
-import Gallery from '@/components/Gallery'
-import Hero from '@/components/Hero'
-import Navbar from '@/components/Navbar'
-import Image from 'next/image'
 
 export default function Home() {
-  return (
-    <main
-      className='bg-[#171717]'
-    >
-      <Navbar />
-      <div className='container main'>
-        <Hero />
-        <Gallery />
-        <Desk />
-        <CTA />
-      </div>
-      <Footer />
-    </main>
-  )
+    return (
+        <main className="bg-black w-screen h-screen flex flex-col justify-center ">
+            <h1 className="text-white text-8xl text-center font-bold">Coming</h1>
+            <h1 className="text-[#FFFF00] text-8xl text-center font-bold">Soon</h1>
+        </main>
+    )
 }
