@@ -16,7 +16,11 @@ module.exports = {
             'onPrimary': '#171717',
             'onSecondary': '#f5f5f5',
             'onSurface': '#f5f5f5',
-            'onError': '#000000'
+            'onError': '#000000',
+            'blanche': '#ffffff'
+        },
+        borderRadius: {
+            DEFAULT: '15px'
         }
     },
     plugins: [],
