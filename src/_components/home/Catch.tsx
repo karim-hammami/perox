@@ -11,7 +11,7 @@ export const Catch = () => {
     console.log(width)
     if (width === null) {
         return (
-            <div>ERROR</div>
+            <></>
         )
     }
     else if (width > 800) {
