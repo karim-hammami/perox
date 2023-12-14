@@ -5,11 +5,10 @@ import React from "react";
 import { MeshComponent } from "./MeshComponent";
 
 
-export function Item({ position, fileUrl, scale, rotation }:
+export function Item({ position, fileUrl, rotation }:
     {
         position: [x: number, y: number, z: number],
         fileUrl: string,
-        scale: [x: number, y: number, z: number],
         rotation: rotation 
     }) {
     return(
@@ -17,7 +16,7 @@ export function Item({ position, fileUrl, scale, rotation }:
         <OrbitControls />
         <hemisphereLight intensity={1.2} />
         <pointLight position={[80, 50, 60]} />
-        <MeshComponent position={position} scale={scale} fileUrl={fileUrl} rotation={rotation} />
+        <MeshComponent position={position} fileUrl={fileUrl} rotation={rotation} />
     </Canvas>
     )
 }
