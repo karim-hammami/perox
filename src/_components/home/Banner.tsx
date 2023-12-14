@@ -2,7 +2,7 @@ import React from "react";
 
 export const Banner = () => {
     return (
-        <div className="border border-primary w-1/2 h-screen flex items-center justify-evenly">
+        <div className="w-1/2 h-screen flex items-center justify-evenly">
             <div className="flex flex-col items-center justify-between">
                 <div className="flex flex-col items-center mb-36">
                     <h1 className="text-blanche text-9xl font-bold">MUSIC</h1>
