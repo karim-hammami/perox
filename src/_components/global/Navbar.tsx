@@ -1,15 +1,67 @@
-import Image from 'next/image'
-import React from 'react'
+'use client';
+import Image from 'next/image';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default function Navbar() {
-    return (
-        <>
-            <div className='fixed z-50 bg-background w-full h-28'>
-                <div className='flex mx-48 items-center py-5 justify-between'>
-                    <Image src="/logo.webp" alt="logo" width={50} height={50} />
-                    <Image src="/Vector.png" alt="menu" width={50} height={50} />
-                </div>
-            </div>
-        </>
-    )
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const menuContainerRef = useRef<HTMLDivElement | null>(null);
+
+
+  const toggleMenu = () => {
+    setIsMenuVisible(!isMenuVisible);
+  };
+
+  const closeMenuOnOutsideClick = (event: MouseEvent) => {
+    const menuContainer = menuContainerRef.current;
+
+    if (menuContainer && !menuContainer.contains(event.target as Node)) {
+      setIsMenuVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isMenuVisible) {
+      document.addEventListener('click', closeMenuOnOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener('click', closeMenuOnOutsideClick);
+    };
+  }, [isMenuVisible]);
+
+  return (
+    <>
+      <div className='fixed z-20 bg-background w-full h-28'>
+        <div className='flex mx-48 items-center py-5 justify-between'>
+          <Image src="/logo.webp" alt="logo" width={50} height={50} />
+          <Image
+            src="/Vector.png"
+            alt="menu"
+            width={50}
+            height={50}
+            onClick={toggleMenu}
+            style={{ cursor: 'pointer' }}
+          />
+        </div>
+      </div>
+
+      {isMenuVisible && (
+        <div ref={menuContainerRef} className='fixed z-50 top-0 right-0 h-screen w-1/2 bg-surface shadow-2xl'>
+          <div className='flex items-center my-8 justify-between mx-48'>
+            <h1 className='text-surface font-bold select-none'>Get Beats Now</h1>
+            <Image onClick={toggleMenu} src="/close.png" alt="close" width={50} height={50} style={{cursor: 'pointer'}} />
+          </div>
+          <div className='flex flex-col text-onBackground font-bold text-7xl mx-16 mt-24 '>
+            <div className='my-5 hover:text-primary cursor-pointer'>Home</div>
+            <div className='my-5 hover:text-primary cursor-pointer'>Shop</div>
+            <div className='my-5 hover:text-primary cursor-pointer'>About</div>
+            <div className='my-5 hover:text-primary cursor-pointer'>Contact me</div>
+            <div className='my-5 hover:text-primary cursor-pointer'>Log in</div>
+          </div>
+        </div>
+      )}
+    </>
+  );
 }
+
+
