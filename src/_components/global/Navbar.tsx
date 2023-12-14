@@ -46,12 +46,12 @@ export default function Navbar() {
       </div>
 
       {isMenuVisible && (
-        <div ref={menuContainerRef} className='fixed z-50 top-0 right-0 h-screen w-1/2 bg-surface shadow-2xl'>
-          <div className='flex items-center my-8 justify-between mx-48'>
+        <div ref={menuContainerRef} className='fixed z-50 top-0 right-0 h-screen lg:w-1/2 xl:w-1/2 2xl:w-1/2 md:w-screen sm:w-screen bg-surface shadow-2xl'>
+          <div className='flex items-center my-8 justify-between mx-48 sm:mx-12'>
             <h1 className='text-surface font-bold select-none'>Get Beats Now</h1>
             <Image onClick={toggleMenu} src="/close.png" alt="close" width={50} height={50} style={{cursor: 'pointer'}} />
           </div>
-          <div className='flex flex-col text-onBackground font-bold text-7xl mx-16 mt-24 '>
+          <div className='flex flex-col text-onBackground font-bold text-7xl sm:text-6xl mx-16 sm:mx-10 mt-24 sm:mt-10 '>
             <div className='my-5 hover:text-primary cursor-pointer'>Home</div>
             <div className='my-5 hover:text-primary cursor-pointer'>Shop</div>
             <div className='my-5 hover:text-primary cursor-pointer'>About</div>

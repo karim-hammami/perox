@@ -20,20 +20,21 @@ export function MeshComponent(
     const gltf = useLoader(GLTFLoader, fileUrl);
     const { viewport } = useThree()
     const rot: rotation = rotation
+    const SPEED = 0.01
 
     useFrame(() => {
         switch(rot) {
             case 'x' :
-                mesh.current.rotation.x += 0.002
+                mesh.current.rotation.x += SPEED
                 break
             case 'y' :
-                mesh.current.rotation.y += 0.002
+                mesh.current.rotation.y += SPEED
                 break
             case 'z' :
-                mesh.current.rotation.z += 0.002
+                mesh.current.rotation.z += SPEED
                 break
             default :
-                mesh.current.rotation.y += 0.002
+                mesh.current.rotation.y += SPEED
                 break
         }
     });
