@@ -9,8 +9,12 @@ import { Item } from "./3d/Item";
 export const Catch = () => {
     const { height, width } = useWindowDimensions();
     console.log(width)
-
-    if (width > 800) {
+    if (width === null) {
+        return (
+            <div>ERROR</div>
+        )
+    }
+    else if (width > 800) {
         return (
             <div className="lg:w-1/2 xl:w-1/2 2xl:w-1/2 bg-background h-screen flex items-center justify-center">
                 <div className="grid lg:grid-cols-4 lg:grid-rows-4 xl:grid-cols-4 xl:grid-rows-4 2xl:grid-cols-4 2xl:grid-rows-4 md:grid-cols-2 md:grid-rows-2 sm:grid-cols-2 sm:grid-rows-2">
