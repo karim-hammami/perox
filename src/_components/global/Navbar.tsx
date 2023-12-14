@@ -31,8 +31,8 @@ export default function Navbar() {
 
   return (
     <>
-      <div className='fixed z-20 bg-background w-full h-28'>
-        <div className='flex mx-48 items-center py-5 justify-between'>
+      <div className='fixed z-40 bg-background w-full h-28'>
+        <div className='flex mx-48 md:mx-24 sm:mx-12 items-center py-5 justify-between'>
           <Image src="/logo.webp" alt="logo" width={50} height={50} />
           <Image
             src="/Vector.png"

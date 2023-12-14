@@ -1,6 +1,6 @@
 'use client';
 import { rotation } from "@/types/Catch";
-import { useFrame, useLoader } from "@react-three/fiber";
+import { useFrame, useLoader, useThree } from "@react-three/fiber";
 import React, { useRef } from "react";
 import { Mesh } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -18,7 +18,7 @@ export function MeshComponent(
         }) {
     const mesh = useRef<Mesh>(null!);
     const gltf = useLoader(GLTFLoader, fileUrl);
-
+    const { viewport } = useThree()
     const rot: rotation = rotation
 
     useFrame(() => {
@@ -39,7 +39,7 @@ export function MeshComponent(
     });
 
     return (
-        <mesh ref={mesh} position={position} scale={scale}>
+        <mesh ref={mesh} position={position} scale={(viewport.width / 4)}>
             <primitive object={gltf.scene.clone(true)} />
         </mesh>
     );

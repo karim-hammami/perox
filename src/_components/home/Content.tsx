@@ -4,9 +4,9 @@ import { Banner } from "./Banner";
 
 export const Content = () => {
     return (
-        <div className="flex ">
-            <Catch />
+        <div className="flex md:flex-col sm:flex-col">
             <Banner />
+            <Catch />
         </div>
     )
 }
