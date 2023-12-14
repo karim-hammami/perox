@@ -9,11 +9,10 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 
 export function MeshComponent(
-    { position, fileUrl, scale, rotation }:
+    { position, fileUrl, rotation }:
         {
             position: [x: number, y: number, z: number],
             fileUrl: string,
-            scale: [x: number, y: number, z: number],
             rotation: rotation
         }) {
     const mesh = useRef<Mesh>(null!);
