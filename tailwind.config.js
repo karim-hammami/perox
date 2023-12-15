@@ -20,7 +20,8 @@ module.exports = {
             'blanche': '#ffffff'
         },
         borderRadius: {
-            DEFAULT: '15px'
+            DEFAULT: '15px',
+            FULL: '9999px'
         },
         screens: {
             'sm': {'min': '320px', 'max': '767px'},

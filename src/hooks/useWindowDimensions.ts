@@ -1,28 +1,37 @@
-'use client';
-import { useState, useEffect } from 'react';
+"use client";
+import { useState, useEffect } from "react";
 
-const hasWindow = typeof window !== 'undefined';
+const hasWindow = typeof window !== "undefined";
 
-  function getWindowDimensions() {
-    const width = hasWindow ? window.innerWidth : null;
-    const height = hasWindow ? window.innerHeight : null;
-    return {
-      width,
-      height,
-    };
-  }
-  
+
+
+
 export default function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+  height: window.innerHeight,
+  });
 
   useEffect(() => {
+    // only execute all the code below in client side
+    // Handler to call on window resize
     function handleResize() {
-      setWindowDimensions(getWindowDimensions());
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
     }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  return windowDimensions;
+    
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+     
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+    
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
 }
