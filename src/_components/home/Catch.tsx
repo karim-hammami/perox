@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { Spinner } from "../global/Spinner";
 import { Item } from "./3d/Item";
 
 
@@ -128,5 +129,7 @@ export const Catch = () => {
         </div>
       );
     }
-  } 
+  } else {
+    return <Spinner />
+  }
 };
