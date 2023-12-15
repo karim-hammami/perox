@@ -1,10 +1,19 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+
+
+
 
 export default function Navbar() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const menuContainerRef = useRef<HTMLDivElement | null>(null);
+
+  const variants = {
+    open: { opacity: 1 , x: 0 },
+    closed: { opacity: 0, x: "-20%" },
+  }
 
   const toggleMenu = () => {
     setIsMenuVisible(!isMenuVisible);
@@ -28,6 +37,33 @@ export default function Navbar() {
     };
   }, [isMenuVisible]);
 
+  const container = {
+    hidden: {  x: "100%" },
+    show: {
+      x: 0,
+      transition: {
+        ease: "linear",
+        duration: 0.15,
+        staggerChildren: 0.05,
+      },
+    },
+    close: {
+      x: 100, 
+      transition: { 
+        ease: "linear",
+        duration: 1,
+       }, 
+    },
+  };
+  
+  const item = {
+    hidden: { x: "100%" },
+    show: { 
+      x: 0, 
+      transition: { duration: 0.5 }
+    },
+  };
+
   return (
     <>
       <div className="fixed z-40 bg-background w-full h-28">
@@ -45,33 +81,37 @@ export default function Navbar() {
       </div>
 
       {isMenuVisible && (
-        <div
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          exit="close"
           ref={menuContainerRef}
-          className="fixed z-50 top-0 right-0 h-screen lg:w-1/2 xl:w-1/2 2xl:w-1/2 md:w-screen sm:w-screen bg-surface shadow-2xl"
+          className="fixed z-50 top-0 right-0 h-screen lg:w-1/2 xl:w-1/2 2xl:w-1/2 md:w-screen sm:w-screen bg-primary shadow-2xl"
         >
           <div className="flex items-center my-8 justify-between mx-48 sm:mx-12">
-            <h1 className="text-surface font-bold select-none">
+            <h1 className="text-primary font-bold select-none">
               Get Beats Now
             </h1>
             <Image
               onClick={toggleMenu}
-              src="/close.png"
+              src="/Closer.png"
               alt="close"
               width={50}
               height={50}
               style={{ cursor: "pointer" }}
             />
           </div>
-          <div className="flex flex-col text-onBackground font-bold text-7xl sm:text-6xl mx-16 sm:mx-10 mt-24 sm:mt-10 ">
-            <div className="my-5 hover:text-primary cursor-pointer">Home</div>
-            <div className="my-5 hover:text-primary cursor-pointer">Shop</div>
-            <div className="my-5 hover:text-primary cursor-pointer">About</div>
-            <div className="my-5 hover:text-primary cursor-pointer">
+          <div  className="flex flex-col text-surface font-bold text-7xl sm:text-6xl mx-16 sm:mx-10 mt-24 sm:mt-10 ">
+            <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Home</motion.div>
+            <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Shop</motion.div>
+            <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>About</motion.div>
+            <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>
               Contact me
-            </div>
-            <div className="my-5 hover:text-primary cursor-pointer">Log in</div>
+            </motion.div>
+            <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Log in</motion.div>
           </div>
-        </div>
+        </motion.div>
       )}
     </>
   );

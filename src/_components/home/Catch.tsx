@@ -130,6 +130,6 @@ export const Catch = () => {
       );
     }
   } else {
-    return <Spinner />
+    return <></>
   }
 };
