@@ -1,3 +1,4 @@
+"use client";
 import { rotation } from "@/types/Catch";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas, useThree } from "@react-three/fiber";
