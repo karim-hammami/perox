@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 
 
@@ -103,12 +104,20 @@ export default function Navbar() {
             />
           </div>
           <div  className="flex flex-col text-surface font-bold text-7xl sm:text-6xl mx-16 sm:mx-10 mt-24 sm:mt-10 ">
-            <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Home</motion.div>
+            <Link href="/">
+              <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Home</motion.div>
+            </Link>
+            
             <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Shop</motion.div>
-            <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>About</motion.div>
+           
+            <Link href="/about">
+              <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>About</motion.div>
+            </Link>
+            
             <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>
               Contact me
             </motion.div>
+           
             <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Log in</motion.div>
           </div>
         </motion.div>
