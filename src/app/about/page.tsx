@@ -1,6 +1,7 @@
 "use client";
 
 import { Aboutpage } from "@/_components/about/Aboutpage";
+import { Footer } from "@/_components/global/Footer";
 import Navbar from "@/_components/global/Navbar";
 
 export default function About() {
@@ -8,6 +9,7 @@ export default function About() {
         <main className="bg-background">
             <Navbar />
             <Aboutpage />
+            <Footer />
         </main>
     )
 }
