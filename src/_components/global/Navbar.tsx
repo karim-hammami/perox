@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
 
@@ -49,10 +49,10 @@ export default function Navbar() {
       },
     },
     close: {
-      x: 100, 
+      x: "100%", 
       transition: { 
-        ease: "linear",
-        duration: 1,
+        ease: "easeIn",
+        duration: 0.2,
        }, 
     },
   };
@@ -80,7 +80,7 @@ export default function Navbar() {
           />
         </div>
       </div>
-
+      <AnimatePresence mode="wait">
       {isMenuVisible && (
         <motion.div
           variants={container}
@@ -104,13 +104,13 @@ export default function Navbar() {
             />
           </div>
           <div  className="flex flex-col text-surface font-bold text-7xl sm:text-6xl mx-16 sm:mx-10 mt-24 sm:mt-10 ">
-            <Link href="/">
+            <Link href="/" onClick={toggleMenu}>
               <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Home</motion.div>
             </Link>
             
             <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Shop</motion.div>
            
-            <Link href="/about">
+            <Link href="/about" onClick={toggleMenu}>
               <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>About</motion.div>
             </Link>
             
@@ -122,6 +122,7 @@ export default function Navbar() {
           </div>
         </motion.div>
       )}
+      </AnimatePresence>
     </>
   );
 }
