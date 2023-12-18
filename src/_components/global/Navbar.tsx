@@ -114,9 +114,11 @@ export default function Navbar() {
               <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>About</motion.div>
             </Link>
             
+            <Link href="/contact" onClick={toggleMenu}>
             <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>
-              Contact me
+              Contact
             </motion.div>
+            </Link>
            
             <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Log in</motion.div>
           </div>
