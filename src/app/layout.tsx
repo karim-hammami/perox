@@ -3,13 +3,15 @@ import { Inter } from 'next/font/google'
 import { Suspense } from 'react'
 import { Spinner } from '@/_components/global/Spinner'
 import Navbar from '@/_components/global/Navbar'
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
     title: 'PEROX',
-    description: 'PEROX - Coming soon',
+    description: 'PEROX Shop',
 }
 
 export default function RootLayout({
@@ -18,10 +20,12 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html className='bg-background' lang="en">          
+        <html className='bg-background' lang="en"> 
+            <link rel="icon" href="/logo.webp" sizes="any" />         
             <body className={inter.className}>     
                 <Navbar />      
-                {children}                   
+                {children}
+                <SpeedInsights />                 
             </body>          
         </html>
     )
