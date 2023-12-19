@@ -7,7 +7,6 @@ import Navbar from "@/_components/global/Navbar";
 export default function Contact() {
     return (
         <main>
-            <Navbar />
             <ContactPage />
             <Footer />
         </main>

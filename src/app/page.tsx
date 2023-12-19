@@ -18,7 +18,6 @@ export default function Home() {
     return !isLoading ? (
    
             <main>
-                    <Navbar />
                     <Homepage />  
             </main>
 

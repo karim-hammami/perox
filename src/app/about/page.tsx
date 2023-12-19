@@ -7,7 +7,6 @@ import Navbar from "@/_components/global/Navbar";
 export default function About() {
     return (
         <main className="bg-background">
-            <Navbar />
             <Aboutpage />
             <Footer />
         </main>
