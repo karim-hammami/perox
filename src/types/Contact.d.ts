@@ -1,6 +1,4 @@
-type Email = `${string}@${string}.${string}`
-
 export interface Contact {
-    email: Email,
+    email: string,
     message: string
 }
