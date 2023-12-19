@@ -31,7 +31,7 @@ export async function ContactMe(prevState: any ,formdata: FormData) {
         }
         const tobesent = {
             "from": "onboarding@resend.dev",
-            "to": "hammamik790@gmail.com",
+            "to": "skonwerzli@gmail.com",
             "subject": `You have an Email from ${data.email}`,
             "html": `<h1>You have an Email from ${data.email} sent from <a href="https://peroxmusic.com">peroxmusic.com</a></h1><p><strong>${data.message}</strong></p>`
         }
@@ -52,7 +52,6 @@ export async function ContactMe(prevState: any ,formdata: FormData) {
         }
 
         const responseData = await response.json();
-
 
         return { 
             isError: false, 
