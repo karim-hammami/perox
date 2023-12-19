@@ -18,13 +18,10 @@ export async function ContactMe(prevState: any ,formdata: FormData) {
     }
     try {
         const parse = schema.parse(rawData);
-        console.log('Data is valid:', rawData);
         const data: Contact = {
             email: parse.email,
             message: parse.message
         }
-        const secret = process.env.SECRET
-        console.log(secret)
         resend.emails.send({
             from: 'onboarding@resend.dev',
             to: 'hammamik790@gmail.com',
@@ -39,7 +36,6 @@ export async function ContactMe(prevState: any ,formdata: FormData) {
             statusCode: 200, 
         }; 
     } catch (error) {
-        console.error('Validation error');
         return { 
             isError: true, 
             isSuccess: false, 

@@ -69,7 +69,9 @@ export default function Navbar() {
     <>
       <div className="fixed z-40 bg-background w-full h-28">
         <div className="flex mx-48 md:mx-24 sm:mx-12 items-center py-5 justify-between">
-          <Image src="/logo.webp" alt="logo" width={50} height={50} />
+          <Link href="/">
+            <Image src="/logo.webp" alt="logo" width={50} height={50} />
+          </Link>
           <Image
             src="/Vector.png"
             alt="menu"
@@ -119,8 +121,7 @@ export default function Navbar() {
               Contact
             </motion.div>
             </Link>
-           
-            <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Log in</motion.div>
+
           </div>
         </motion.div>
       )}
