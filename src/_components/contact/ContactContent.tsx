@@ -14,10 +14,10 @@ export const ContactContent = () => {
     useEffect(() => {
         if (state?.isSuccess) {
             console.log(state)
-            toast.success('Message has been sent!')
+            toast.success('Message has been sent!', {style: {background: "#FFFF00", color: "#000000"}})
         } else if (state?.isError) {
             console.log(state)
-            toast.error("There seems to be a problem!")
+            toast.error("There seems to be a problem!", {style: {background: "#FFFF00", color: "#000000"}})
         }
     }, [state])
     

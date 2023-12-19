@@ -13,7 +13,7 @@ export const ContactButton = () => {
 
     const { pending } = useFormStatus()
 
-    const style = `bg-[#FFFF00] hover:bg-[#d3d36f] flex items-center justify-center outline-none font-bold w-2/3 h-[45px] m-5 rounded`
+    const style = `bg-[#FFFF00]  flex items-center justify-center outline-none font-bold w-2/3 h-[45px] m-5 rounded`
 
     return (
         <button type="submit" className={style}>{pending ? <ContactLoading /> : "submit"}</button>

@@ -19,6 +19,8 @@ export async function ContactMe(prevState: any ,formdata: FormData) {
             email: parse.email,
             message: parse.message
         }
+        const secret = process.env.SECRET
+        console.log(secret)
         return { 
             isError: false, 
             isSuccess: true, 
