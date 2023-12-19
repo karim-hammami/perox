@@ -4,6 +4,7 @@ import { Suspense } from 'react'
 import { Spinner } from '@/_components/global/Spinner'
 import Navbar from '@/_components/global/Navbar'
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 
 
@@ -25,7 +26,8 @@ export default function RootLayout({
             <body className={inter.className}>     
                 <Navbar />      
                 {children}
-                <SpeedInsights />                 
+                <SpeedInsights />     
+                <Analytics />            
             </body>          
         </html>
     )
