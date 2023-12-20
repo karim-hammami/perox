@@ -1,4 +1,4 @@
-"use client";
+
 import React, { Suspense } from "react";
 import { Catch } from "./Catch";
 import { Banner } from "./Banner";

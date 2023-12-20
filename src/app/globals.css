@@ -3,3 +3,37 @@
 @tailwind utilities;
 
 
+@keyframes borderAnimation {
+    0% {
+      border-width: 4px;
+      border-image-source: linear-gradient(45deg, var(--primary), transparent);
+    }
+    50% {
+      border-width: 4px;
+      border-image-source: linear-gradient(225deg, var(--primary), transparent);
+    }
+    100% {
+      border-width: 4px;
+      border-image-source: linear-gradient(405deg, var(--primary), transparent);
+    }
+  }
+  
+  .animate-border {
+    --primary: #FFFF00;
+    animation: borderAnimation 4s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+    border-image-slice: 1;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  
+  
+  
+  
+  
+
+  
+  
+  

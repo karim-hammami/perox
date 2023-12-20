@@ -105,7 +105,7 @@ export default function Navbar() {
               style={{ cursor: "pointer" }}
             />
           </div>
-          <div  className="flex flex-col text-surface font-bold text-7xl sm:text-6xl mx-16 sm:mx-10 mt-24 sm:mt-10 ">
+          <div  className="flex flex-col text-surface font-bold text-6xl sm:text-5xl mx-16 sm:mx-10 mt-24 sm:mt-10 ">
             <Link href="/" onClick={toggleMenu}>
               <motion.div className="my-5 hover:text-onSecondary cursor-pointer" variants={item}>Home</motion.div>
             </Link>

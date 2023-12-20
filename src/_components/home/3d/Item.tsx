@@ -15,10 +15,9 @@ export function Item({
   rotation: rotation;
 }) {
   return (
-    <Canvas className="border-surface border-2 lg:h-36 lg:w-36 xl:h-36 xl:w-36 2xl:h-36 2xl:w-36 sm:h-24 sm:w-24">
+    <Canvas className="">
       <OrbitControls />
       <hemisphereLight intensity={1.2} />
-      <pointLight position={[80, 50, 60]} />
       <MeshComponent
         position={position}
         fileUrl={fileUrl}

@@ -18,7 +18,7 @@ export function MeshComponent({
   const gltf = useLoader(GLTFLoader, fileUrl);
   const { viewport } = useThree();
   const rot: rotation = rotation;
-  const SPEED = 0.01;
+  const SPEED = 0;
 
   useFrame(() => {
     switch (rot) {
@@ -38,7 +38,7 @@ export function MeshComponent({
   });
 
   return (
-    <mesh ref={mesh} position={position} scale={viewport.width / 4}>
+    <mesh ref={mesh} position={position} scale={viewport.width / 2}>
       <primitive object={gltf.scene.clone(true)} />
     </mesh>
   );
