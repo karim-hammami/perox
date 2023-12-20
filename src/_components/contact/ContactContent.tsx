@@ -42,7 +42,7 @@ export const ContactContent = () => {
 
                     <p className="text-primary text-8xl font-bold sm:text-5xl py-10">Booking</p>
                     <Link href="https://wa.me/+21654443650">
-                        <Image className="py-10" src="/whatsapp.svg" alt="whatsapp" width={200} height={200} />
+                        <Image className="py-10" src="/whatsapp.svg" alt="whatsapp" width={200} height={200} priority/>
                     </Link>
                     <a href="tel:+21654443650" className="text-onBackground sm:text-4xl text-8xl py-10">+21654443650</a>
 

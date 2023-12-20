@@ -1,8 +1,5 @@
-"use client";
 import React from "react";
 import { AboutContent } from "./AboutContent";
-
-
 
 export const Aboutpage = () => {
     return (

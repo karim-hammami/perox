@@ -2,8 +2,6 @@
 import React from "react";
 import Image from "next/image";
 
-
-
 export const AboutContent = () => {
     return (
         <div className="bg-background">
@@ -14,7 +12,7 @@ export const AboutContent = () => {
                 <div className="px-48 sm:px-12">
                     <div className="lg:flex xl:flex 2xl:flex sm:flex sm:flex-col items-center justify-around my-28">
                     <p className="text-primary font-bold text-4xl  sm:text-2xl sm:mb-16 w-96 sm:w-80">Skander Werzli A.k.a PEROX was born on January 5th 2001 in La Marsa, Tunis.</p>
-                    <Image src="/first.png" alt="second image" height={400} width={400} />
+                    <Image src="/first.png" alt="second image" height={400} width={400} priority />
                     </div>
 
                     <div className="lg:flex xl:flex 2xl:flex sm:flex sm:flex-col-reverse items-center justify-around my-28">

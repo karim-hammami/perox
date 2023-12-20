@@ -70,7 +70,7 @@ export default function Navbar() {
       <div className="fixed z-40 bg-background w-full h-28">
         <div className="flex mx-48 md:mx-24 sm:mx-12 items-center py-5 justify-between">
           <Link href="/">
-            <Image src="/logo.webp" alt="logo" width={50} height={50} />
+            <Image src="/logo.webp" alt="logo" width={50} height={50} priority/>
           </Link>
           <Image
             src="/Vector.png"
@@ -78,6 +78,7 @@ export default function Navbar() {
             width={50}
             height={50}
             onClick={toggleMenu}
+            priority
             style={{ cursor: "pointer" }}
           />
         </div>
@@ -102,6 +103,7 @@ export default function Navbar() {
               alt="close"
               width={50}
               height={50}
+              priority
               style={{ cursor: "pointer" }}
             />
           </div>
