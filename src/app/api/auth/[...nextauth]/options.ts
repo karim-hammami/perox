@@ -12,5 +12,11 @@ export const options: NextAuthOptions = {
   })
 ],
 adapter: PrismaAdapter(db) as Adapter,
-secret: process.env.NEXTAUTH_SECRET
+secret: process.env.NEXTAUTH_SECRET,
+theme: {
+  colorScheme: 'dark',
+  brandColor: 'ffff00',
+  logo: '/logo.webp',
+  buttonText: 'ffffff'
+}
 }
