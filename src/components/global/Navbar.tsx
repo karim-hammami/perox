@@ -1,4 +1,5 @@
 "use client";
+// TODO: Refactor Navbar into multiple components
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -148,7 +149,7 @@ export default function Navbar() {
               </Link>
               </div>
               <motion.div
-                className="absolute bottom-2 w-4/5 mx-16 sm:mx-10  my-5 py-6 px-4 text-onBackground bg-background font-bold text-4xl sm:text-3xl rounded"
+                className="absolute bottom-2 w-4/5 mx-16 sm:mx-10  my-5 py-6 px-4 text-blanche bg-background font-bold text-4xl sm:text-3xl rounded"
                 variants={item}
               >
                 {session?.user ? (

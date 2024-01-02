@@ -8,6 +8,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { SessionProvider } from 'next-auth/react'
 import { NextAuthProvider } from '@/components/global/NextAuthProvider'
+import LoginReminder from '@/components/global/LoginReminder'
 
 
 
@@ -28,8 +29,10 @@ export default function RootLayout({
             <link rel="icon" href="/logo.webp" sizes="any" />         
             <body className={inter.className}>       
                 <NextAuthProvider>
-                    <Navbar />    
-                    {children}
+                    <LoginReminder>
+                        <Navbar />    
+                        {children}
+                    </LoginReminder>
                 </NextAuthProvider>
                 <SpeedInsights />     
                 <Analytics />            
