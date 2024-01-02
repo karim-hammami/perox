@@ -1,4 +1,4 @@
-import { Spinner } from "@/_components/global/Spinner";
+import { Spinner } from "@/components/global/Spinner";
 
 
 

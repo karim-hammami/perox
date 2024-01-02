@@ -1,8 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Suspense } from 'react'
-import { Spinner } from '@/_components/global/Spinner'
-import Navbar from '@/_components/global/Navbar'
+import { Spinner } from '@/components/global/Spinner'
+import Navbar from '@/components/global/Navbar'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 

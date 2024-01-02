@@ -15,7 +15,8 @@ export const ContactButton = () => {
 
     const style = `bg-[#FFFF00]  flex items-center justify-center outline-none font-bold w-2/3 h-[45px] m-5 rounded`
 
-    return (
-        <button type="submit" className={style}>{pending ? <ContactLoading /> : "submit"}</button>
-    )
+    if (pending) {
+        return (<button type="submit" className={style}><ContactLoading /></button>)
+    } 
+    return (<button type="submit" className={style}>Submit</button>)
 }

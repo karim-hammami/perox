@@ -1,7 +1,7 @@
 "use client";
-import Navbar from "@/_components/global/Navbar";
-import { Spinner } from "@/_components/global/Spinner";
-import { Homepage } from "@/_components/home/Homepage";
+import Navbar from "@/components/global/Navbar";
+import { Spinner } from "@/components/global/Spinner";
+import { Homepage } from "@/components/home/Homepage";
 import { Suspense, useEffect, useState } from "react";
 
 
