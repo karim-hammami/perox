@@ -15,8 +15,8 @@ adapter: PrismaAdapter(db) as Adapter,
 secret: process.env.NEXTAUTH_SECRET,
 theme: {
   colorScheme: 'dark',
-  brandColor: 'ffff00',
+  brandColor: '#ffff00',
   logo: '/logo.webp',
-  buttonText: 'ffffff'
+  buttonText: '#ffffff'
 }
 }

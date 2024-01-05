@@ -113,10 +113,10 @@ export default function Navbar() {
                 style={{ cursor: "pointer" }}
               />
             </div>
-            <div className="flex flex-col text-surface font-bold text-6xl sm:text-5xl mx-16 sm:mx-10 mt-24 sm:mt-10 ">
+            <div className="flex flex-col text-surface font-bold text-6xl sm:text-4xl mx-16 sm:mx-10 mt-24 sm:mt-10 ">
               <Link href="/" onClick={toggleMenu}>
                 <motion.div
-                  className="my-5 hover:text-onSecondary cursor-pointer"
+                  className="my-5 sm:my-4 hover:text-onSecondary cursor-pointer"
                   variants={item}
                 >
                   Home
@@ -124,7 +124,7 @@ export default function Navbar() {
               </Link>
 
               <motion.div
-                className="my-5 hover:text-onSecondary cursor-pointer"
+                className="my-5 sm:my-4 hover:text-onSecondary cursor-pointer"
                 variants={item}
               >
                 Shop
@@ -132,7 +132,7 @@ export default function Navbar() {
 
               <Link href="/about" onClick={toggleMenu}>
                 <motion.div
-                  className="my-5 hover:text-onSecondary cursor-pointer"
+                  className="my-5 sm:my-4 hover:text-onSecondary cursor-pointer"
                   variants={item}
                 >
                   About
@@ -141,7 +141,7 @@ export default function Navbar() {
 
               <Link href="/contact" onClick={toggleMenu}>
                 <motion.div
-                  className="my-5 hover:text-onSecondary cursor-pointer"
+                  className="my-5 sm:my-4 hover:text-onSecondary cursor-pointer"
                   variants={item}
                 >
                   Contact
