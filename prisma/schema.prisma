@@ -54,3 +54,21 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+
+model Beats {
+  id String @id @default(cuid())
+  name String
+  producer String
+  bpm Int
+  price Int
+  genre String
+  license License @relation(references: [id], fields: [licenseId])
+  licenseId String
+}
+
+model License {
+  id String @id @default(cuid())
+  name String
+  beats Beats[]
+}

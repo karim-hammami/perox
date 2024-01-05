@@ -147,6 +147,15 @@ export default function Navbar() {
                   Contact
                 </motion.div>
               </Link>
+
+              <Link href="/admin" onClick={toggleMenu}>
+                <motion.div
+                  className="my-5 sm:my-4 hover:text-onSecondary cursor-pointer"
+                  variants={item}
+                >
+                  Dashboard
+                </motion.div>
+              </Link>
               </div>
               <motion.div
                 className="absolute bottom-2 w-4/5 mx-16 sm:mx-10  my-5 py-6 px-4 text-blanche bg-background font-bold text-4xl sm:text-3xl rounded"
